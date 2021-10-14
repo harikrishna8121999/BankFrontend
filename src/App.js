@@ -3,6 +3,7 @@ import "./App.css";
 import CreateAccountComponent from "./components/CreateAccountComponent";
 import ListAccountComponent from "./components/ListAccountComponent";
 import UpdateAccountComponent from "./components/UpdateAccountComponent";
+import ViewAccountComponent from "./components/ViewAccountComponent";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
           <Route path="/add-account" component={CreateAccountComponent} />
           <Route path="/update-account/:id" component={UpdateAccountComponent} />
+          <Route path="/view-account/:id" component={ViewAccountComponent} />
         </Switch>
       </Router>
     </div>

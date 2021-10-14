@@ -10,6 +10,17 @@ export default class ListAccountComponent extends Component {
         }
         this.addAccount = this.addAccount.bind(this);
         this.editAccount = this.editAccount.bind(this);
+        this.deleteAccount = this.deleteAccount.bind(this);
+        this.viewAccount = this.viewAccount.bind(this);
+    }
+    deleteAccount(id){
+        AccountService.deleteAccount(id).then(res => {
+            this.setState({accountDetails: this.state.accountDetails.filter(AccountDetails => AccountDetails.id !== id)});
+        });
+    }
+
+    viewAccount(id){
+        this.props.history.push(`/view-account/${id}`);
     }
      editAccount(id){
         this.props.history.push(`/update-account/${id}`);
@@ -58,6 +69,8 @@ export default class ListAccountComponent extends Component {
                                     <td> {AccountDetails.currency} </td>
                                     <td>
                                         <button onClick = { () => this.editAccount(AccountDetails.id)}>Update</button>
+                                        <button onClick = { () => this.deleteAccount(AccountDetails.id)}>Delete</button>
+                                        <button onClick = { () => this.viewAccount(AccountDetails.id)}>View Account</button>
                                     </td>
                                     </tr>
                                    

@@ -18,6 +18,10 @@ class AccountService {
     updateAccount(accountDetails, accountId){
         return axios.put(ACCOUNT_API_BASE_URL + '/'+accountId, accountDetails);
     }
+
+    deleteAccount(accountId){
+        return axios.delete(ACCOUNT_API_BASE_URL + '/' + accountId);
+    }
 }
 
 export default new AccountService()
