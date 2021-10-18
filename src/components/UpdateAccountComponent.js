@@ -70,10 +70,11 @@ export default class UpdateAccountComponent extends Component {
      render() {
          return (
              <div>
-                 <div>
-                     <div>
-                         <div>
-                             <h3>Update Account</h3>
+                 <br></br>
+                 <div className = "container">
+                     <div className = "row">
+                         <div className = "card col-md-6 offset-md-3 offset-md-3">
+                             <h3 className="text-center">Update Account</h3>
                              <div className="card-body">
                                  <form>
                                      <div className="form-group">
@@ -106,8 +107,8 @@ export default class UpdateAccountComponent extends Component {
                                          <input placeholder="currency" name="currency" className="form-control" value
                                          ={this.state.currency} onChange={this.changecurrencyHandler}/>
                                      </div>
-                                     <button onClick={this.updateAccount}>Save</button>
-                                     <button onClick={this.cancel.bind(this)}>Cancel</button>
+                                     <button className="btn btn-success"  onClick={this.updateAccount}>Save</button>
+                                     <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{margin: "10px 10px"}}>Cancel</button>
                                  </form>
                              </div>
                          </div>

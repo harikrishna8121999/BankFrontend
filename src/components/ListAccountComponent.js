@@ -38,20 +38,20 @@ export default class ListAccountComponent extends Component {
     render() {
         return (
             <div>
-               <h2>Accounts List</h2>
-               <div>
-                   <button onClick={this.addAccount}>Add Account</button>
-               </div>
-               <div>
-                   <table>
+               <h2 className="text-center">Accounts List</h2>
+               
+               <br></br>
+               <div className = "row">
+                   <table className = "table table-striped table-bordered">
                        <thead>
                            <tr>
-                               <th>Name</th>
+                               <th>Id</th>
+                               {/* <th>Name</th>
                                <th>Mobile no</th>
                                <th>Account Type</th>
                                <th>Account no</th>
                                <th>Balance</th>
-                               <th>Currency</th>
+                               <th>Currency</th> */}
                                <th>Actions</th>
                            </tr>
                        </thead>
@@ -61,16 +61,17 @@ export default class ListAccountComponent extends Component {
                                this.state.accountDetails.map(
                                    AccountDetails =>
                                    <tr key = {AccountDetails.id}> 
-                                    <td> {AccountDetails.name} </td>
+                                   <td> {AccountDetails.id} </td>
+                                    {/* <td> {AccountDetails.name} </td>
                                     <td> {AccountDetails.mobileNumber} </td>
                                     <td> {AccountDetails.accountType} </td>
                                     <td> {AccountDetails.accountNumber} </td>
                                     <td> {AccountDetails.balance} </td>
-                                    <td> {AccountDetails.currency} </td>
+                                    <td> {AccountDetails.currency} </td> */}
                                     <td>
-                                        <button onClick = { () => this.editAccount(AccountDetails.id)}>Update</button>
-                                        <button onClick = { () => this.deleteAccount(AccountDetails.id)}>Delete</button>
-                                        <button onClick = { () => this.viewAccount(AccountDetails.id)}>View Account</button>
+                                        <button className="btn btn-info" onClick = { () => this.editAccount(AccountDetails.id)}  style={{margin: "10px 10px"}}>Update</button>
+                                        <button onClick = { () => this.deleteAccount(AccountDetails.id)} className="btn btn-danger" style={{margin: "10px 10px"}}>Delete</button>
+                                        <button onClick = { () => this.viewAccount(AccountDetails.id)}className="btn btn-info" style={{margin: "10px 10px"}} >View Account</button>
                                     </td>
                                     </tr>
                                    
@@ -78,6 +79,10 @@ export default class ListAccountComponent extends Component {
                            }
                        </tbody>
                    </table>
+                   <br></br>
+                   <div className = "row">
+                   <button className="btn btn-primary btn-lg btn-block" onClick={this.addAccount}>Add Account</button>
+               </div>
                </div>
             </div>
         )

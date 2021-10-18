@@ -4,10 +4,13 @@ import CreateAccountComponent from "./components/CreateAccountComponent";
 import ListAccountComponent from "./components/ListAccountComponent";
 import UpdateAccountComponent from "./components/UpdateAccountComponent";
 import ViewAccountComponent from "./components/ViewAccountComponent";
+import HomeComponent from "./components/HomeComponent";
+import HeaderComponent from "./components/HeaderComponent";
+import FooterComponent from "./components/FooterComponent";
 
 function App() {
   return (
-    <div>
+    <div className= "container">
       <Router>
         <Switch>
           <Route path="/" exact component={ListAccountComponent} />

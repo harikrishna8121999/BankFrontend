@@ -57,9 +57,10 @@ cancel(){
     render() {
         return (
             <div>
-                <div>
-                    <div>
-                        <div>
+                <br></br>
+                <div className = "container">
+                    <div className = "row">
+                        <div  className = "card col-md-6 offset-md-3 offset-md-3">
                             <h3>Add Account</h3>
                             <div className="card-body">
                                 <form>
@@ -93,8 +94,8 @@ cancel(){
                                         <input placeholder="currency" name="currency" className="form-control" value
                                         ={this.state.currency} onChange={this.changecurrencyHandler}/>
                                     </div>
-                                    <button onClick={this.saveAccount}>Save</button>
-                                    <button onClick={this.cancel.bind(this)}>Cancel</button>
+                                    <button className="btn btn-success" onClick={this.saveAccount}>Save</button>
+                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{margin: "10px 10px"}}>Cancel</button>
                                 </form>
                             </div>
                         </div>

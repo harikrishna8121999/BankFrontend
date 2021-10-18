@@ -20,32 +20,29 @@ export default class ViewAccountComponent extends Component {
         return (
             <div>
                 <br></br>
-                <div>
-                    <h3>View Account</h3>
-                    <div>
-                        <div>
-                            <label>Name</label>
-                            <div>{this.state.accountDetails.name}</div>
+                <div className = "card col-md-6 offset-md-3">
+                    <h3 className = "text-center">View Account</h3>
+                    <div className = "card-body">
+                        <div className = "row">
+                            <label>Name: {this.state.accountDetails.name}</label>
                         </div>
-                        <div>
-                            <label>Mobile Number</label>
-                            <div>{this.state.accountDetails.mobileNumber}</div>
+                        <div className = "row">
+                            <label>Mobile Number: {this.state.accountDetails.mobileNumber}</label>
                         </div>
-                        <div>
-                            <label>Account Type</label>
-                            <div>{this.state.accountDetails.accountType}</div>
+                        <div className = "row">
+                            <label>Account Type: {this.state.accountDetails.accountType}</label>
                         </div>
-                        <div>
-                            <label>Account Number</label>
-                            <div>{this.state.accountDetails.accountNumber}</div>
+                        <div className = "row">
+                            <label>Account Number: {this.state.accountDetails.accountNumber}</label>
+                            
                         </div>
-                        <div>
-                            <label>Balance</label>
-                            <div>{this.state.accountDetails.balance}</div>
+                        <div className = "row">
+                            <label>Balance: {this.state.accountDetails.balance}</label>
+                            
                         </div>
-                        <div>
-                            <label>Currency</label>
-                            <div>{this.state.accountDetails.currency}</div>
+                        <div >
+                            <label>Currency: {this.state.accountDetails.currency}</label>
+                            
                         </div>
                     </div>
                 </div>
